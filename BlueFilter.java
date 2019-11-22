@@ -29,6 +29,9 @@ public class BlueFilter extends Filter
             for(int x = 0; x < width; x++) {
                Color pix = image.getPixel(x, y);
                 int blue = pix.getBlue();
+                if(blue <= 127) {
+                    blue = 255 - blue;
+                }
                 image.setPixel(x, y, new Color(0,0,blue));
             }
         }
