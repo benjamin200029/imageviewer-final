@@ -28,7 +28,10 @@ public class GreenFilter extends Filter
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
                Color pix = image.getPixel(x, y);
-                int green = (pix.getGreen());
+                int green = pix.getGreen();
+                if(green <= 127) {
+                    green = 255 - green;
+                }
                 image.setPixel(x, y, new Color(0,green,0));
             }
         }

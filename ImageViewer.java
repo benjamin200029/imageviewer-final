@@ -258,6 +258,9 @@ public class ImageViewer
         filterList.add(new RedFilter("Red Channel Filter"));
         filterList.add(new BlueFilter("Blue Channel Filter"));
         filterList.add(new GreenFilter("Green Channel Filter"));
+        filterList.add(new RedTintFilter("Red Tint Filter"));
+        filterList.add(new BlueTintFilter("Blue Tint Filter"));
+        filterList.add(new GreenTintFilter("Green Tint Filter"));
 
        
         return filterList;
