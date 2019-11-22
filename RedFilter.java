@@ -29,9 +29,9 @@ public class RedFilter extends Filter
             for(int x = 0; x < width; x++) {
                Color pix = image.getPixel(x, y);
                 int red = pix.getRed();
-                if(red <= 127) {
-                    red = 255 - red;
-                }
+                //if(red <= 127) {
+                 //   red = 255 - red;
+                //}
                 image.setPixel(x, y, new Color(red,0,0));
             }
         }

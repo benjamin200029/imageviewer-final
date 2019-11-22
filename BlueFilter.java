@@ -28,8 +28,8 @@ public class BlueFilter extends Filter
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
                Color pix = image.getPixel(x, y);
-                int blue = (pix.getBlue());
-                image.setPixel(x, y, new Color(blue));
+                int blue = pix.getBlue();
+                image.setPixel(x, y, new Color(0,0,blue));
             }
         }
     }

@@ -29,7 +29,7 @@ public class GreenFilter extends Filter
             for(int x = 0; x < width; x++) {
                Color pix = image.getPixel(x, y);
                 int green = (pix.getGreen());
-                image.setPixel(x, y, new Color(green));
+                image.setPixel(x, y, new Color(0,green,0));
             }
         }
     }
