@@ -1,33 +1,49 @@
-
+import java.awt.Color;
 /**
- * Write a description of class warholFilter here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * An image filter to make the image with a warholFilter.
+ * 
+ * @author Ben Adelson
+ * @version 2019-11-24
  */
-public class warholFilter
+public class WarHolFilter extends Filter
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private OFImage original;
+    // contains the width and height for the smaller images from the original full size
+    private int width;
+    private int height;
+    
     /**
-     * Constructor for objects of class warholFilter
+     * Constructor for objects of class WarHolFilter.
+     * @param name The name of the filter.
      */
-    public warholFilter()
+    public WarHolFilter(String name)
     {
-        // initialise instance variables
-        x = 0;
+        super(name);
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Apply this filter to an image.
+     * 
+     * @param  image  The image to be changed by this filter.
      */
-    public int sampleMethod(int y)
+    public void apply(OFImage image)
     {
-        // put your code here
-        return x + y;
+        original = new OFImage(image);
+        width = original.getWidth()/2;
+        height = original.getHeight()/2;
+
+        for(int y = 0; y < height; y++) {
+            for(int x = 0; x < width; x++) {
+               Color pix = image.getPixel(x, y);
+               int red = pix.getRed();
+               int blue = pix.getBlue();
+               int green = pix.getGreen();
+
+               image.setPixel(x+width, y, new Color(red,0,0));
+               image.setPixel(x+width, y+height, new Color(0,0,blue));
+               image.setPixel(x, y+height, new Color(0,green,0));
+
+            }
+        }
     }
 }

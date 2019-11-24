@@ -2,8 +2,8 @@ import java.awt.Color;
 /**
  * An image filter to make the image with a Red Tint Filter.
  * 
- * @author Michael Kölling and David J. Barnes.
- * @version 1.0
+ * @author Ben Adelson
+ * @version 2019-11-24
  */
 public class RedTintFilter extends Filter
 {
@@ -29,9 +29,6 @@ public class RedTintFilter extends Filter
             for(int x = 0; x < width; x++) {
                Color pix = image.getPixel(x, y);
                 int red = pix.getRed();
-                //if(red <= 127) {
-                 //   red = 255 - red;
-                //}
                 image.setPixel(x, y, new Color(red,0,0));
             }
         }

@@ -2,8 +2,8 @@ import java.awt.Color;
 /**
  * An image filter to make the image with a Green Filter.
  * 
- * @author Michael Kölling and David J. Barnes.
- * @version 1.0
+ * @author Ben Adelson
+ * @version 2019-11-24
  */
 public class GreenFilter extends Filter
 {
