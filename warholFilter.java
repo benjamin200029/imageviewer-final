@@ -34,11 +34,15 @@ public class WarHolFilter extends Filter
 
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
+               image.setPixel(x,y,original.getPixel(x*2,y*2));
+               // basically copies original at a quarter size, 
+               // without it, only had one image cutting the top 1/4 side
                Color pix = image.getPixel(x, y);
                int red = pix.getRed();
                int blue = pix.getBlue();
                int green = pix.getGreen();
-
+               
+               //creates the 3 quarter sized images with different colors
                image.setPixel(x+width, y, new Color(red,0,0));
                image.setPixel(x+width, y+height, new Color(0,0,blue));
                image.setPixel(x, y+height, new Color(0,green,0));

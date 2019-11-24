@@ -13,7 +13,7 @@ public class FlippedWarHolFilter extends Filter
     private int height;
     
     /**
-     * Constructor for objects of class FlippedWarHolFilter.
+     * Constructor for objects of class WarHolFilter.
      * @param name The name of the filter.
      */
     public FlippedWarHolFilter(String name)
@@ -34,15 +34,18 @@ public class FlippedWarHolFilter extends Filter
 
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
-               Color pix = image.getPixel(x, y);
+               Color pix = original.getPixel(x*2, y*2);
+               image.setPixel(x,y,original.getPixel(x*2,y*2));
+               // basically copies original at a quarter size, 
+               // without it, only had one image cutting the top 1/4 side
                int red = pix.getRed();
                int blue = pix.getBlue();
                int green = pix.getGreen();
-
-               image.setPixel(x+width, y, new Color(red,0,0));
-               image.setPixel(x+height, y+height, new Color(0,0,blue));
-               image.setPixel(x, y+height, new Color(0,green,0));
-
+               
+               //creates the 3 quarter sized images with 3 different colors with the bottom two mirrored
+               image.setPixel((((width*2) - x - 1)), y, new Color(red,0,0));
+               image.setPixel((((width*2) - x-1)), (((height*2) - y - 1)), new Color(0,0,blue));
+               image.setPixel(x,(((height*2) - y - 1)), new Color(0,green,0));
             }
         }
     }
