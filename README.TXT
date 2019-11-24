@@ -1,4 +1,4 @@
-Project "imageviewer-final" (version 3.1)
+﻿Project "imageviewer-final" (version 3.1)
 Authors: David Barnes and Michael Kölling
 
 This project is part of the material for the book
@@ -23,3 +23,28 @@ WARNING:
 It sometimes happens (unfortunately) that the image viewer window opens BEHIND the
 BlueJ window. This can be confusing, since it initially appears as if nothing 
 is happening.
+
+
+
+You need to implement the following:
+Create 8 new filters:
+First, convert the color image in to a gray scale image that shows how much red or green or blue is in each pixel of the image. These are the same thing as the channels in photoshop
+red channel filter
+green channel filter
+blue channel filter
+
+
+Next, actually give the image the tints of red or blue or green
+red tint filter
+green tint filter
+blue tint filter
+
+
+Finally, create a warhol filter 
+Original image at quarter size			Red channel image
+Green channel image				Blue channel image
+
+
+and flipped warhol filter
+Original image at quarter size			Red channel image mirrorred horizontally
+Green channel image mirrored vertically		Blue channel image mirrored horizontally and vertically
