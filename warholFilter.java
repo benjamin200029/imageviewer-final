@@ -1,6 +1,11 @@
 import java.awt.Color;
 /**
  * An image filter to make the image with a warholFilter.
+ * creates 4 quarter sized images from the original image
+ * design by instructor would be :
+ * Original image at quartersize         Red Channel image
+ * 
+ * Green Channel image                   Blue channel image  
  * 
  * @author Ben Adelson
  * @version 2019-11-24

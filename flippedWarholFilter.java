@@ -1,6 +1,12 @@
 import java.awt.Color;
 /**
- * An image filter to make the image with a warholFilter.
+ * An image filter to make the image with a FlippedwWarholFilter.
+ * creates 4 quarter sized images from the original image with the bottom images being mirrored
+ * 
+ * design by instructor:
+ * Original image at quartersize                            Red Channel image mirrorred horizontally
+ * 
+ * Green Channel image mirrorred vertically                 Blue channel image mirrorred horizontally and vertically 
  * 
  * @author Ben Adelson
  * @version 2019-11-24
@@ -42,7 +48,7 @@ public class FlippedWarHolFilter extends Filter
                int blue = pix.getBlue();
                int green = pix.getGreen();
                
-               //creates the 3 quarter sized images with 3 different colors with the bottom two mirrored
+               //creates the 3 quarter sized images with 3 different colors, blue and green are mirrored
                image.setPixel((((width*2) - x - 1)), y, new Color(red,0,0));
                image.setPixel((((width*2) - x-1)), (((height*2) - y - 1)), new Color(0,0,blue));
                image.setPixel(x,(((height*2) - y - 1)), new Color(0,green,0));
