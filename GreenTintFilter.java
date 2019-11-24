@@ -1,6 +1,6 @@
 import java.awt.Color;
 /**
- * An image filter to make the image a bit darker.
+ * An image filter to make the image with a Green Tint Filter.
  * 
  * @author Michael Kölling and David J. Barnes.
  * @version 1.0
@@ -8,7 +8,7 @@ import java.awt.Color;
 public class GreenTintFilter extends Filter
 {
     /**
-     * Constructor for objects of class DarkerFilter.
+     * Constructor for objects of class GreenTintFilter.
      * @param name The name of the filter.
      */
     public GreenTintFilter(String name)
