@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=FlippedWarHolFilter
-comment0.text=\r\n\ An\ image\ filter\ to\ make\ the\ image\ with\ a\ warholFilter.\r\n\ \r\n\ @author\ Ben\ Adelson\r\n\ @version\ 2019-11-24\r\n
+comment0.text=\r\n\ An\ image\ filter\ to\ make\ the\ image\ with\ a\ FlippedwWarholFilter.\r\n\ creates\ 4\ quarter\ sized\ images\ from\ the\ original\ image\ with\ the\ bottom\ images\ being\ mirrored\r\n\ \r\n\ design\ by\ instructor\:\r\n\ Original\ image\ at\ quartersize\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Red\ Channel\ image\ mirrorred\ horizontally\r\n\ \r\n\ Green\ Channel\ image\ mirrorred\ vertically\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Blue\ channel\ image\ mirrorred\ horizontally\ and\ vertically\ \r\n\ \r\n\ @author\ Ben\ Adelson\r\n\ @version\ 2019-11-24\r\n
 comment1.params=name
 comment1.target=FlippedWarHolFilter(java.lang.String)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ WarHolFilter.\r\n\ @param\ name\ The\ name\ of\ the\ filter.\r\n
